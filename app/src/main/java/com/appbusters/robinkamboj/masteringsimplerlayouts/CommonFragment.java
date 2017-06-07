@@ -14,12 +14,9 @@ import android.view.ViewGroup;
  */
 public class CommonFragment extends Fragment {
 
-    private String from = getString(R.string.title_home);
-
     public CommonFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,7 +24,7 @@ public class CommonFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_common, container, false);
 
-        from = getArguments().getString("from");
+        String from = getArguments().getString("from");
 
         if(from.equals(getString(R.string.title_home))){
             Log.e("FROM", from);
