@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:{
-                    from = "HOME";
+                    from = getString(R.string.title_home);
                     addFragment(from);
                     showConditional();
                     return true;
@@ -40,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 case R.id.navigation_explore:{
-                    from = "EXPLORE";
+                    from = getString(R.string.title_explore);
                     addFragment(from);
                     showConditional();
                     return true;
                 }
                 case R.id.navigation_your_feeds:{
-                    from = "YOUR FEEDS";
+                    from = getString(R.string.your_feeds);
                     addFragment(from);
                     showConditional();
                     return true;

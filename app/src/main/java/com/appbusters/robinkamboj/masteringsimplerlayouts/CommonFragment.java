@@ -3,6 +3,7 @@ package com.appbusters.robinkamboj.masteringsimplerlayouts;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
  */
 public class CommonFragment extends Fragment {
 
+    private String from = getString(R.string.title_home);
 
     public CommonFragment() {
         // Required empty public constructor
@@ -23,7 +25,21 @@ public class CommonFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_common, container, false);
+        View v = inflater.inflate(R.layout.fragment_common, container, false);
+
+        from = getArguments().getString("from");
+
+        if(from.equals(getString(R.string.title_home))){
+            Log.e("FROM", from);
+        }
+        else if(from.equals(getString(R.string.title_explore))){
+            Log.e("FROM", from);
+        }
+        else if(from.equals(getString(R.string.your_feeds))){
+            Log.e("FROM", from);
+        }
+
+        return v;
     }
 
 }
