@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 case R.id.navigation_guru:{
-
+                    hideConditional();
                     return true;
                 }
                 case R.id.navigation_explore:{
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 case R.id.navigation_profile:{
-
+                    hideConditional();
                     return true;
                 }
             }
