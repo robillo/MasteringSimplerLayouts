@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout conditional;
     @BindView(R.id.fragment_container)
     FrameLayout container;
+    @BindView(R.id.header)
+    TextView header;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -32,27 +35,33 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:{
                     from = getString(R.string.title_home);
+                    header.setText("Daily Suvichar : Home");
                     addFragment(from);
                     showConditional();
                     return true;
                 }
                 case R.id.navigation_guru:{
+                    header.setText("Daily Suvichar : Guru List");
+                    addGuruFragment();
                     hideConditional();
                     return true;
                 }
                 case R.id.navigation_explore:{
+                    header.setText("Daily Suvichar : Explore");
                     from = getString(R.string.title_explore);
                     addFragment(from);
                     showConditional();
                     return true;
                 }
                 case R.id.navigation_your_feeds:{
-                    from = getString(R.string.your_feeds);
+                    header.setText("Daily Suvichar : Your Feeds");
+                    from = getString(R.string.title_your_feeds);
                     addFragment(from);
                     showConditional();
                     return true;
                 }
                 case R.id.navigation_profile:{
+                    header.setText("Daily Suvichar : Profile");
                     hideConditional();
                     return true;
                 }

@@ -9,22 +9,22 @@
     <item
         android:id="@+id/navigation_guru"
         android:icon="@drawable/ic_nature_people_black_24dp"
-        android:title="@string/guru" />
+        android:title="@string/title_guru" />
 
     <item
         android:id="@+id/navigation_explore"
         android:icon="@drawable/ic_donut_large_black_24dp"
-        android:title="@string/explore" />
+        android:title="@string/title_explore" />
 
     <item
         android:id="@+id/navigation_your_feeds"
         android:icon="@drawable/ic_face_black_24dp"
-        android:title="@string/your_feeds" />
+        android:title="@string/title_your_feeds" />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_insert_emoticon_black_24dp"
-        android:title="@string/profile" />
+        android:title="@string/title_profile" />
 
 </menu>
 

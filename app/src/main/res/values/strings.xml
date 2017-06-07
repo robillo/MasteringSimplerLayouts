@@ -3,10 +3,8 @@
     <string name="title_home">HOME</string>
     <string name="title_guru">GURU</string>
     <string name="title_explore">EXPLORE</string>
-    <string name="your_feeds">YOUR FEEDS</string>
-    <string name="explore">EXPLORE</string>
-    <string name="guru">GURU</string>
-    <string name="profile">PROFILE</string>
+    <string name="title_your_feeds">YOUR FEEDS</string>
+    <string name="title_profile">PROFILE</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

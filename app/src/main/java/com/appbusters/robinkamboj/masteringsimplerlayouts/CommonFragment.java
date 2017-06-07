@@ -37,7 +37,7 @@ public class CommonFragment extends Fragment {
         else if(from.equals(getString(R.string.title_explore))){
             Log.e("FROM", from);
         }
-        else if(from.equals(getString(R.string.your_feeds))){
+        else if(from.equals(getString(R.string.title_your_feeds))){
             Log.e("FROM", from);
         }
 
