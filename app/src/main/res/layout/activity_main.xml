@@ -5,33 +5,103 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.appbusters.robinkamboj.masteringsimplerlayouts.MainActivity">
+    android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/content"
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/message"
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_home" />
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    </FrameLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Daily Suvichar"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20sp"
+                    android:id="@+id/header"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabGravity="fill"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="90sp"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:id="@+id/fragment_container">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50sp"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:id="@+id/conditional">
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:text="Share Status"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhiteShade"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:text="Share Photo"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhiteShade"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:text="Share Video"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhiteShade"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/navigation" />
+
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>
