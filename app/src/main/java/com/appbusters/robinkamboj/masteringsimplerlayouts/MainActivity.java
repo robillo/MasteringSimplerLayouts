@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import butterknife.BindView;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.conditional)
     LinearLayout conditional;
+    @BindView(R.id.container)
+    FrameLayout container;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -70,7 +73,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addFragment(String from){
+        CommonFragment commonFragment = new CommonFragment();
+        Bundle args = new Bundle();
+        args.putString("from", from);
+        commonFragment.setArguments(args);
 
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container, commonFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @Override
