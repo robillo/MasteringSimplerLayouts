@@ -3,7 +3,6 @@ package com.appbusters.robinkamboj.masteringsimplerlayouts;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,31 +14,22 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CommonFragment extends Fragment {
+public class GuruFragment extends Fragment {
 
-    public CommonFragment() {
+
+    public GuruFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_common, container, false);
+        View v = inflater.inflate(R.layout.fragment_guru, container, false);
 
         setHasOptionsMenu(true);
-
-        String from = getArguments().getString("from");
-
-        if(from.equals(getString(R.string.title_home))){
-            Log.e("FROM", from);
-        }
-        else if(from.equals(getString(R.string.title_explore))){
-            Log.e("FROM", from);
-        }
-        else if(from.equals(getString(R.string.your_feeds))){
-            Log.e("FROM", from);
-        }
 
         return v;
     }
@@ -47,7 +37,7 @@ public class CommonFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        inflater.inflate(R.menu.menu_common, menu);
+        inflater.inflate(R.menu.menu_guru, menu);
 
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -60,7 +50,7 @@ public class CommonFragment extends Fragment {
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.action_language: {
+            case R.id.action_sort: {
 
                 break;
             }
